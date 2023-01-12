@@ -1,24 +1,3 @@
-// const gifts = [ "bicicleta", "auto", "muñeca", "xbox"]
-
-// function wrapping() {
-//     for(let item of gifts) {
-//         var wrapper= "*";
-//         var lenght = gifts[0].length + gifts.indexOf(item) + 1
-
-//         for (i = 0; i < lenght ; i++ ) {
-
-//             wrapper += "*";
-//         }
-
-//         wrappedGift = wrapper + item + wrapper;
-
-//         console.log(wrappedGift)
-
-//     }
-
-// }
-// wrapping()
-
 // If the year is evenly divisible by 4, go to step 2. Otherwise, go to step 5.
 // If the year is evenly divisible by 100, go to step 3. Otherwise, go to step 4.
 // If the year is evenly divisible by 400, go to step 4. Otherwise, go to step 5.
@@ -173,7 +152,6 @@ getMaxGifts()
 var cube = "";
 
 function createCube(cubeSides) {
-
   // upperSide
   for (i = 0; i < cubeSides; i++) {
     var indexOfSpaces = cubeSides - 1;
@@ -193,7 +171,6 @@ function createCube(cubeSides) {
 
   // downSide
   for (i = cubeSides; i > 0; i--) {
-
     for (y = i; y < cubeSides; y++) {
       cube += " ";
     }
@@ -211,5 +188,3 @@ function createCube(cubeSides) {
 createCube(4);
 
 console.log(cube);
-
-
