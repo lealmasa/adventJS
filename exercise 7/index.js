@@ -1,39 +1,17 @@
-var cube = "";
+function cube(base) {
+  let output = "";
+  let input = base * 2;
 
-function createCube(cubeSides) {
-  // upperSide
-  for (i = 0; i < cubeSides; i++) {
-    var indexOfSpaces = cubeSides - 1;
-
-    for (y = indexOfSpaces; y > i; y--) {
-      cube += " ";
-    }
-
-    for (y = 0; y <= i; y++) {
-      cube += "/\\";
-    }
-    for (y = 0; y < cubeSides; y++) {
-      cube += "_\\";
-    }
-    cube += "\n";
+  for (i = 1; i <= input; i++) {
+    output += ` `.repeat(i <= input / 2 ? input - i : i - 1);
+    output += `${i <= input / 2 ? "/\\" : "\\/"}`.repeat(
+      i <= input / 2 ? i : input - i + 1
+    );
+    output += `${i <= input / 2 ? "_\\" : "_/"}`.repeat(base);
+    output += `\n`;
   }
 
-  // downSide
-  for (i = cubeSides; i > 0; i--) {
-    for (y = i; y < cubeSides; y++) {
-      cube += " ";
-    }
-
-    for (y = 0; y < i; y++) {
-      cube += "\\/";
-    }
-    for (y = 0; y < cubeSides; y++) {
-      cube += "_/";
-    }
-    cube += "\n";
-  }
+  console.log(output);
 }
 
-createCube(12);
-
-console.log(cube);
+cube();
